@@ -1,0 +1,68 @@
+
+<div class="container">
+    <div class="row">
+        <div class="card" *ngFor="let student of datalist; let i=index">
+            <div class="row">
+                <div class="col-2">
+                    <div>
+                        <img src='assets/userimg.png'>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col-2">
+                            <span class="badge text-bg-primary">
+                                {{student.id}}
+                            </span>
+                        </div>
+                        <div class="col-10">
+                         <h5>Name:{{student.name}}</h5>
+                       </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-10">
+                           <h5>Email:{{student.email}}</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col-4">
+                          <h5>Mobile:{{student.mobile}}</h5>
+                        </div>
+                        </div>
+                    <div class="col">
+                            <h5>Address:</h5>
+                        </div>
+                        <div class="col-4">
+                           <span class="badge bg-success">City:{{student.city}}</span>
+                        </div>
+                        <div class="col-4">
+                           <span class="badge text-bg-success">zipcode:{{student.zipcode}}</span>
+                        </div>
+                        </div>
+                        <div class="col-2">
+                             <div class="row">
+                                <div class="col-2">
+                                    <div class="col-2">
+                                        <div>
+                                            <button (click)="onEditdata(student.id)" style="margin-top: 50px;" class = "btn btn-primary" ><h4>Edit</h4></button> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="col-2"> 
+                                <div class="row">
+                                <div class="col-2">
+                                <button (click)="deletedata(i)" style="margin-top: 50px;" class = "btn btn-primary" ><h4>Delete</h4></button>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                    </div>
+                     </div>
+                     
+                 </div>
+              
+            
